@@ -68,7 +68,10 @@ if __name__ == "__main__":
     new_calc = calc_ver03(5)    # 5
     new_calc.undo()             # 에러 , 예외처리 요망 ('undo 할 기록이 없습니다' 출력)
     new_calc.add(3)             # 8
-    new_calc.div(2)             # 4
+    new_calc.div(2)
+    print()                     # 4
+
+    new_calc.mul(2)             # 4
     new_calc.undo()             # 8
     new_calc.redo()             # 4
     new_calc.redo()             # 에러 , 예외처리 요망 ('redo 할 기록이 없습니다' 출력)
