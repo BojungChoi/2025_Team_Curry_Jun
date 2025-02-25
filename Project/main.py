@@ -1,4 +1,5 @@
 import bingo
+import GawiBawiBo
 ### CLI 
 
 """
@@ -18,6 +19,7 @@ while True:
 
     if command == 1 : 
         # 가위바위보 게임 시작
+        GawiBawiBo.GawiBawiBo()
         print('가위바위보')
         pass
     elif command == 2 :
