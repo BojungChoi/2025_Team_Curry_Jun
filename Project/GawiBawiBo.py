@@ -15,7 +15,7 @@ def GawiBawiBo():
         MyChoice = input("가위, 바위, 보 중에 하나를 골라 적으세요 ==>  ")
 
         if MyChoice not in ["가위", "바위", "보"]:
-            print("잘못된 입력입니다. 다시 입력해주세요.")
+            print("❌잘못된 입력❌입니다. 다시 입력해주세요.")
             continue
 
         if MyChoice == computer:
@@ -39,6 +39,6 @@ def GawiBawiBo():
         print(f"컴퓨터의 선택은 {computer}, 따라서 당신의 {game}입니다.\n")
         
         if game == "승리":
-            print("축하합니다! 승리하셨습니다.\n")
+            print("🎉축하합니다! 승리하셨습니다.🎉\n")
             break
 
