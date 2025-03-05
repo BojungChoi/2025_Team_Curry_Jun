@@ -12,7 +12,7 @@ SELECT *
   
   
 INSERT INTO Customer(customer_id, name, email, phone, address) 
-VALUES (4,'강황','fake5378@naver.com','010-2758-8299','양산');
+VALUES (4,'보정ㅋ','fake5378@naver.com','010-2758-8299','양산');
 
 
   
@@ -29,13 +29,17 @@ SELECT name,email
 SELECT * FROM Customer;
 UPDATE Customer
    SET name = '강황555'
-   WHERE customer_id = 4
+   WHERE customer_id = 4;
 	
     
 
 -- 4. Customer 테이블에서, 주소가 부산시 인 유저의 이름과 전화번호, 주소를 보여주세요.
 -- Tip. DML , SELECT 문
 -- 결과 : name : 이영희 | phone : 010-9876-5432 | 부산시 어쩌구저쩌구  만약 본인이 부산에 거주중이라면 1번 문제에서 INSERT 된 값도 나오는게 정상
+SELECT name,phone,address
+FROM Customer
+WHERE address LIKE '%부산시%';
+
 
 -- 몸풀기 완료.
 -- 생각하는 문제 3개 갑니다.
@@ -44,10 +48,18 @@ UPDATE Customer
 -- Tip. JOIN 혹은 FROM & WHERE 절로 테이블 두개를 합친 후 COUNT 집계함수를 활용해보자.
 -- 어려울 수 있다, 하지만 고통스러워도 견뎌라, 머리 안 쓰는 문제만 풀면 머리 안 쓰는 일만 한다.
 -- 결과 : category : 전자기기 | 개수 : 2
+SELECT * 
+FROM OrderDetails;
+WHERE (
 
 
+)
+
+SELECT * FROM Product;
 -- 6. Product 테이블을 활용하여 카테고리 별 제품의 개수와, 합산된 가격을 표시해주세요.
 -- Tip. GROUP BY와 집계함수 활용하기
+SELECT * FROM Product;
+
 -- 결과 : category : 전자기기, 액세서리, 가구 | 제품개수 : 2, 1, 2 | 합산금액 : 2100000.00 , 150000.00 , 420000.00
 
 
